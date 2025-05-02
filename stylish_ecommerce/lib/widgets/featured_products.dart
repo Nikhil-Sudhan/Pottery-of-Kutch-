@@ -139,12 +139,12 @@ class ProductCard extends StatelessWidget {
                       );
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.black),
-                      foregroundColor: MaterialStateProperty.all(AppTheme.accentColor),
-                      padding: MaterialStateProperty.all(
+                      backgroundColor: WidgetStateProperty.all(Colors.black),
+                      foregroundColor: WidgetStateProperty.all(AppTheme.accentColor),
+                      padding: WidgetStateProperty.all(
                         const EdgeInsets.symmetric(vertical: 12),
                       ),
-                      shape: MaterialStateProperty.all(
+                      shape: WidgetStateProperty.all(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(4),
                           side: const BorderSide(color: AppTheme.accentColor),

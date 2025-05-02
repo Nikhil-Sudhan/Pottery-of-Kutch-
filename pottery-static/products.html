@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pottery of Kutch - Products</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/placeholder-styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Pottery of Kutch</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="products-section">
+        <div class="container">
+            <h2>Our Products</h2>
+            
+            <div class="category-filter">
+                <h3>Filter by Category</h3>
+                <ul>
+                    <li><a href="javascript:filterProducts('All')" class="active filter-btn" data-category="All">All</a></li>
+                    <li><a href="javascript:filterProducts('Mugs')" class="filter-btn" data-category="Mugs">Mugs</a></li>
+                    <li><a href="javascript:filterProducts('Plates')" class="filter-btn" data-category="Plates">Plates</a></li>
+                    <li><a href="javascript:filterProducts('Bowls')" class="filter-btn" data-category="Bowls">Bowls</a></li>
+                    <li><a href="javascript:filterProducts('Vases')" class="filter-btn" data-category="Vases">Vases</a></li>
+                    <li><a href="javascript:filterProducts('Home Decor')" class="filter-btn" data-category="Home Decor">Home Decor</a></li>
+                    <li><a href="javascript:filterProducts('Kitchenware')" class="filter-btn" data-category="Kitchenware">Kitchenware</a></li>
+                </ul>
+            </div>
+            
+            <div class="products-grid" id="products-container">
+                <div class="product-card" data-category="Home Decor">
+                    <img src="images/product_1.jpg" alt="Traditional Water Pot">
+                    <h3>Traditional Water Pot</h3>
+                    <p class="price">$89.99</p>
+                    <p class="description">Traditional clay water vessel</p>
+                    <div class="product-actions">
+                        <a href="product-details.html?id=1" class="btn">View Details</a>
+                        <button onclick="addToCart('1', 'Traditional Water Pot', 89.99, 'images/product_1.jpg', 1)" class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="Vases">
+                    <img src="images/product_2.jpg" alt="Khavda Decorative Vase">
+                    <h3>Khavda Decorative Vase</h3>
+                    <p class="price">$79.99</p>
+                    <p class="description">Hand-painted terracotta vase</p>
+                    <div class="product-actions">
+                        <a href="product-details.html?id=2" class="btn">View Details</a>
+                        <button onclick="addToCart('2', 'Khavda Decorative Vase', 79.99, 'images/product_2.jpg', 1)" class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="Mugs">
+                    <img src="images/product_3.jpg" alt="Kutch Coffee Mug Set">
+                    <h3>Kutch Coffee Mug Set</h3>
+                    <p class="price">$59.99</p>
+                    <p class="description">Set of 4 traditional clay mugs</p>
+                    <div class="product-actions">
+                        <a href="product-details.html?id=3" class="btn">View Details</a>
+                        <button onclick="addToCart('3', 'Kutch Coffee Mug Set', 59.99, 'images/product_3.jpg', 1)" class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="Plates">
+                    <img src="images/product_4.jpg" alt="Terracotta Dinner Plates">
+                    <h3>Terracotta Dinner Plates</h3>
+                    <p class="price">$69.99</p>
+                    <p class="description">Handmade terracotta dinner plates</p>
+                    <div class="product-actions">
+                        <a href="product-details.html?id=4" class="btn">View Details</a>
+                        <button onclick="addToCart('4', 'Terracotta Dinner Plates', 69.99, 'images/product_4.jpg', 1)" class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="Home Decor">
+                    <img src="images/product_5.jpg" alt="Decorative Diya Set">
+                    <h3>Decorative Diya Set</h3>
+                    <p class="price">$39.99</p>
+                    <p class="description">Traditional clay oil lamps</p>
+                    <div class="product-actions">
+                        <a href="product-details.html?id=5" class="btn">View Details</a>
+                        <button onclick="addToCart('5', 'Decorative Diya Set', 39.99, 'images/product_5.jpg', 1)" class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="Bowls">
+                    <img src="images/product_6.jpg" alt="Serving Bowl with Lid">
+                    <h3>Serving Bowl with Lid</h3>
+                    <p class="price">$64.99</p>
+                    <p class="description">Traditional covered serving dish</p>
+                    <div class="product-actions">
+                        <a href="product-details.html?id=6" class="btn">View Details</a>
+                        <button onclick="addToCart('6', 'Serving Bowl with Lid', 64.99, 'images/product_6.jpg', 1)" class="btn btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Pottery of Kutch</h2>
+                    <p>Preserving tradition through craftsmanship</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@potteryofkutch.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Pottery of Kutch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

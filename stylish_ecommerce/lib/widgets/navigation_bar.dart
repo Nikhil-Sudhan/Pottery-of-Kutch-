@@ -6,9 +6,9 @@ class CustomNavigationBar extends StatelessWidget {
   final String currentRoute;
 
   const CustomNavigationBar({
-    Key? key,
+    super.key,
     this.currentRoute = '/',
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +84,7 @@ class CustomNavigationBar extends StatelessWidget {
       child: TextButton(
         onPressed: onTap,
         style: ButtonStyle(
-          overlayColor: MaterialStateProperty.all(Colors.transparent),
+          overlayColor: WidgetStateProperty.all(Colors.transparent),
         ),
         child: Text(
           title,
