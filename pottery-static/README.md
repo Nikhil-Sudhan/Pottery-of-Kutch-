@@ -2,11 +2,26 @@
 
 This is a static HTML/CSS/JavaScript version of the Pottery of Kutch website that can be run directly in your browser without any server-side requirements.
 
-## How to Run the Website
+## Prerequisites
+- Node.js (for running a static HTTP server)
+- Python 3.x (optional)
 
-1. Simply open the `index.html` file in your web browser by double-clicking it or right-clicking and selecting "Open with" your preferred browser.
-
-2. That's it! The website is completely client-side and uses browser localStorage to save cart information.
+## How to Run the Website Locally
+1. Open a terminal in the project root (`pottery-static` folder):
+   ```sh
+   cd pottery-static
+   ```
+2. Start a simple HTTP server:
+   - With Node.js:
+     ```sh
+     npx http-server . -p 8080
+     ```
+   - With Python 3.x:
+     ```sh
+     python -m http.server 5500
+     ```
+3. Open your browser at `http://localhost:8080` (or `http://localhost:5500`).
+4. (Optional) In VS Code, install the Live Server extension and click **Go Live** on `index.html` for live reloading.
 
 ## Adding Images
 
@@ -22,6 +37,13 @@ Before running the website, you'll need to add some images for the products. The
 - `images/about-image.jpg` - About page image
 
 You can add any images you like with these filenames to the `images` folder. If you don't have specific pottery images, you can use any placeholder images and rename them to match these filenames.
+
+## How to Edit the Application
+- **HTML**: Modify the `.html` files in the root directory.
+- **CSS**: Update styles in `css/styles.css` (and `placeholder-styles.css`).
+- **JavaScript**: Edit `js/main.js` for product data, UI logic, and interactivity.
+- **Images**: Add or replace files in the `images/` folder; ensure paths match in `js/main.js`.
+- After making changes, refresh your browser to see updates.
 
 ## Features
 

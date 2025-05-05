@@ -4,7 +4,7 @@ const products = [
         id: '1',
         name: 'Traditional Water Pot',
         price: 89.99,
-        imageUrl: 'images/product_1.jpg',
+        imageUrl: 'images/Pot.jpg',
         description: 'Handcrafted water pot made from locally sourced Kutch clay, featuring traditional geometric patterns. Each piece is shaped on a foot-powered wheel by Kumbhar artisans and fired using traditional methods.',
         category: 'Home Decor',
         shortDescription: 'Traditional clay water vessel'
@@ -13,7 +13,7 @@ const products = [
         id: '2',
         name: 'Khavda Decorative Vase',
         price: 79.99,
-        imageUrl: 'images/product_2.jpg',
+        imageUrl: 'images/Vase.jpg',
         description: 'Hand-thrown decorative vase from Khavda village, featuring the region\'s distinctive white and black motifs on natural terracotta. Perfect as a standalone decorative piece or for dried arrangements.',
         category: 'Vases',
         shortDescription: 'Hand-painted terracotta vase'
@@ -22,7 +22,7 @@ const products = [
         id: '3',
         name: 'Kutch Coffee Mug Set',
         price: 59.99,
-        imageUrl: 'images/product_3.jpg',
+        imageUrl: 'images/Mug_set.webp',
         description: 'Set of four handcrafted coffee mugs made by master potters from Lodai village. Each mug features traditional Kutch designs with natural mineral pigments and a food-safe glaze interior.',
         category: 'Mugs',
         shortDescription: 'Set of 4 traditional clay mugs'
@@ -31,7 +31,7 @@ const products = [
         id: '4',
         name: 'Terracotta Dinner Plates',
         price: 69.99,
-        imageUrl: 'images/product_4.jpg',
+        imageUrl: 'images/Plates.jpg',
         description: 'Set of six dinner plates handcrafted from Kutch clay. These plates feature minimalist design with subtle rim detailing, finished with food-safe natural glazes. Microwave and dishwasher safe.',
         category: 'Plates',
         shortDescription: 'Handmade terracotta dinner plates'
@@ -40,7 +40,7 @@ const products = [
         id: '5',
         name: 'Decorative Diya Set',
         price: 39.99,
-        imageUrl: 'images/product_5.jpg',
+        imageUrl: 'images/Diya_Set.jpg',
         description: 'Set of five hand-painted diyas (oil lamps) made by Kutch artisans. Each piece features traditional motifs representing prosperity and light, perfect for festivals or year-round home decor.',
         category: 'Home Decor',
         shortDescription: 'Traditional clay oil lamps'
@@ -49,7 +49,7 @@ const products = [
         id: '6',
         name: 'Serving Bowl with Lid',
         price: 64.99,
-        imageUrl: 'images/product_6.jpg',
+        imageUrl: 'images/Bowl_with_Lid.webp',
         description: 'Handcrafted serving bowl with matching lid, featuring fish and geometric motifs that symbolize abundance. Made from local Kutch clay and finished with food-safe glazes.',
         category: 'Bowls',
         shortDescription: 'Traditional covered serving dish'
@@ -104,6 +104,34 @@ function initMobileMenu() {
 
 // Products page functionality
 function initProductsPage() {
+    // Populate products container
+    const productsContainer = document.getElementById('products-container');
+    
+    if (productsContainer) {
+        // Clear existing content
+        productsContainer.innerHTML = '';
+        
+        // Create product cards
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.setAttribute('data-category', product.category);
+            
+            productCard.innerHTML = `
+                <img src="${product.imageUrl}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p class="price">$${product.price.toFixed(2)}</p>
+                <p class="description">${product.shortDescription}</p>
+                <div class="product-actions">
+                    <a href="product-details.html?id=${product.id}" class="btn">View Details</a>
+                    <button onclick="addToCart('${product.id}', '${product.name}', ${product.price}, '${product.imageUrl}', 1)" class="btn btn-cart">Add to Cart</button>
+                </div>
+            `;
+            
+            productsContainer.appendChild(productCard);
+        });
+    }
+    
     // Set up category filter buttons
     const filterButtons = document.querySelectorAll('.filter-btn');
     filterButtons.forEach(button => {
