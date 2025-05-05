@@ -22,7 +22,7 @@ const products = [
         id: '3',
         name: 'Kutch Coffee Mug Set',
         price: 59.99,
-        imageUrl: 'images/Mug_set.webp',
+        imageUrl: 'images/Mug_Set.webp',
         description: 'Set of four handcrafted coffee mugs made by master potters from Lodai village. Each mug features traditional Kutch designs with natural mineral pigments and a food-safe glaze interior.',
         category: 'Mugs',
         shortDescription: 'Set of 4 traditional clay mugs'
